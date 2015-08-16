@@ -12,6 +12,10 @@ Move the file 'namer_check.py' to 'couchpotato\core\helpers' directory.
 
 Once installed as above, go about activating the provider as you would with any other provider in CouchPotato
 
+### Imports from
+- T411: https://github.com/djoole/couchpotato.provider.t411
+- CPasbien: https://github.com/Adelscott/CouchPotatoServer
+
 ---
 
 
@@ -28,3 +32,7 @@ Déplacer/copier le fichier 'namer_check.py' dans le dossier 'couchpotato\core\h
 ##Comment l'utiliser
 
 Dès que le plugin est installé comme ci-dessus, activer le fournisseur comme n'importe quel autre.
+
+### Importés depuis
+- T411: https://github.com/djoole/couchpotato.provider.t411
+- CPasbien: https://github.com/Adelscott/CouchPotatoServer
