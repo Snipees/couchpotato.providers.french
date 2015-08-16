@@ -14,7 +14,8 @@ Once installed as above, go about activating the provider as you would with any 
 
 ---
 
-couchpotato.provider.t411
+
+couchpotato.providers.french
 ===========================
 
 T411.io & CPasBien.pw (Francais) Fournisseurs de torrents intégrés dans couchpotato
