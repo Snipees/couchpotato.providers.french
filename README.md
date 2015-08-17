@@ -5,7 +5,7 @@ couchpotato.providers.french
 
 ##How-to install
 
-Move the folder **t411** to your customs_plugin folder, which is located within your config folder. See ***Settings->About->Directories*** (second folder is your config folder) for location. 
+Move folders **t411** & **cpasbien** to your customs_plugin folder, which is located within your config folder. See ***Settings->About->Directories*** (second folder is your config folder) for location. 
 
 Move the file **namer_check.py** to ***couchpotato\core\helpers*** directory.
 
@@ -27,7 +27,7 @@ couchpotato.providers.french
 
 ##Comment l'installer
 
-Déplacez/copiez le dossier **t411** dans le dossier customs_plugin, il est situé dans votre dossier de configuration. Pour trouver cet emplacement allez voir dans ***Settings->About->Directories*** (le deuxieme dossier dans la section config folder)
+Déplacez/copiez les dossiers **t411** & **cpasbien** dans le dossier customs_plugin, il est situé dans votre dossier de configuration. Pour trouver cet emplacement allez voir dans ***Settings->About->Directories*** (le deuxieme dossier dans la section config folder)
 
 Déplacer/copier le fichier **namer_check.py** dans le dossier ***couchpotato\core\helpers***.
 
