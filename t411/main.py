@@ -22,7 +22,7 @@ class t411(TorrentProvider, MovieProvider):
         'login' : 'https://api.t411.in/auth',
         'login_check': 'https://api.t411.in/torrents/top/100',
         'detail' : 'https://www.t411.in/torrents/?id=%s',
-        'search' : 'https://api.t411.in/torrents/search/%s?limit=200&cat=631',
+        'search' : 'https://api.t411.in/torrents/search/%s?limit=200&cid=631',
         'download' : 'https://api.t411.in/torrents/download/%s',
     }
 
