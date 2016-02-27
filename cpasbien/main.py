@@ -18,8 +18,8 @@ log = CPLog(__name__)
 class cpasbien(TorrentProvider, MovieProvider):
 
     urls = {
-        'test': 'http://www.cpasbien.pw/',
-        'search': 'http://www.cpasbien.pw/recherche/',
+        'test': 'http://www.cpasbien.cm/',
+        'search': 'http://www.cpasbien.cm/recherche/',
     }
 
     http_time_between_calls = 1 #seconds
@@ -92,7 +92,7 @@ class cpasbien(TorrentProvider, MovieProvider):
                             continue
                         detail_url = result.find("a")['href']
                         tmp = detail_url.split('/')[-1].replace('.html','.torrent')
-                        url_download = ('http://www.cpasbien.pw/telechargement/%s' % tmp)
+                        url_download = ('http://www.cpasbien.cm/telechargement/%s' % tmp)
                         size = result.findAll(attrs = {'class' : ["poid"]})[0].text
                         seeder = result.findAll(attrs = {'class' : ["seed_ok"]})[0].text
                         leecher = result.findAll(attrs = {'class' : ["down"]})[0].text
@@ -175,7 +175,7 @@ class cpasbien(TorrentProvider, MovieProvider):
         ]
 
         try:
-            response = opener.open('http://www.cpasbien.pw', tryUrlencode({'url': '/'}))
+            response = opener.open('http://www.cpasbien.cm', tryUrlencode({'url': '/'}))
         except urllib2.URLError as e:
             log.error('Login to cPASbien failed: %s' % e)
             return False
