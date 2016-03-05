@@ -1,7 +1,7 @@
 couchpotato.providers.french
 ============================
 
-**T411.in** & **CPasBien.cm** (French) Torrents Providers integration into CouchPotato
+**T411.ch** & **CPasBien.cm** (French) Torrents Providers integration into CouchPotato
 
 ##How-to install
 
@@ -23,7 +23,7 @@ Once installed, go about activating the provider as you would with any other pro
 couchpotato.providers.french
 ============================
 
-**T411.in** & **CPasBien.cm** Intégration des Fournisseurs (Francais) de Torrents dans CouchPotato
+**T411.ch** & **CPasBien.cm** Intégration des Fournisseurs (Francais) de Torrents dans CouchPotato
 
 ##Comment l'installer
 
