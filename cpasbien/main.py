@@ -43,7 +43,6 @@ class cpasbien(TorrentProvider, MovieProvider):
         if not self.last_login_check and not self.login():
             return
 
-
         TitleStringReal = (getTitle(movie['info']) + ' ' + simplifyString(quality['identifier'] )).replace('-',' ').replace(' ',' ').replace(' ',' ').replace(' ',' ').encode("utf8")
         
         URL = (self.urls['search']).encode('UTF8')
@@ -66,6 +65,7 @@ class cpasbien(TorrentProvider, MovieProvider):
                        
             try:
                 html = BeautifulSoup(data)
+
                 lin=0
                 erlin=0
                 resultdiv=[]
@@ -93,10 +93,19 @@ class cpasbien(TorrentProvider, MovieProvider):
                         detail_url = result.find("a")['href']
                         tmp = detail_url.split('/')[-1].replace('.html','.torrent')
                         url_download = ('http://www.cpasbien.cm/telechargement/%s' % tmp)
-                        size = result.findAll(attrs = {'class' : ["poid"]})[0].text
+                        size = result.findAll(attrs = {'class' : ["poid"]})[0].text.replace(u'\xa0', u' ')
                         seeder = result.findAll(attrs = {'class' : ["seed_ok"]})[0].text
                         leecher = result.findAll(attrs = {'class' : ["down"]})[0].text
                         age = '1'
+                        
+                        size = size.lower()
+                        size = size.replace("go", "gb")
+                        size = size.replace("mo", "mb")
+                        size = size.replace("ko", "kb")
+
+                        log.debug("size %s", size)
+                        log.debug("seeder %s", seeder)
+                        log.debug("leecher %s", leecher)
 
                         verify = getTitle(movie['info']).split(' ')
                         
@@ -110,7 +119,6 @@ class cpasbien(TorrentProvider, MovieProvider):
                             return True
 
                         if add == 1:
-
                             new['id'] = id
                             new['name'] = name.strip()
                             new['url'] = url_download
