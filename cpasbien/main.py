@@ -11,6 +11,10 @@ import urllib
 import urllib2
 import unicodedata
 from couchpotato.core.helpers import namer_check
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 log = CPLog(__name__)
 
@@ -93,7 +97,7 @@ class cpasbien(TorrentProvider, MovieProvider):
                         detail_url = result.find("a")['href']
                         tmp = detail_url.split('/')[-1].replace('.html','.torrent')
                         url_download = ('http://www.cpasbien.cm/telechargement/%s' % tmp)
-                        size = result.findAll(attrs = {'class' : ["poid"]})[0].text
+                        size = result.findAll(attrs = {'class' : ["poid"]})[0].text.replace('Go', 'Gb').replace('Mo', 'Mb')
                         seeder = result.findAll(attrs = {'class' : ["seed_ok"]})[0].text
                         leecher = result.findAll(attrs = {'class' : ["down"]})[0].text
                         age = '1'
