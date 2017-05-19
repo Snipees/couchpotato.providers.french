@@ -35,7 +35,7 @@ Et modifiez la en:
 
 ```
 [remote "origin"]
-  url = https://github.com/cyberden/CouchPotatoServer.git
+	url = https://github.com/cyberden/CouchPotatoServer.git
 ```
 
 Sauvegardez en utilisant les commandes `Ctrl+O` puis `Ctrl+X`
