@@ -16,29 +16,33 @@ Aujourd'hui d'autres solutions s'offrent à vous, je vous propose de vous rappro
 
 et bien d'autres encore. (la gestion du [doublage francais](https://github.com/cyberden/CouchPotatoServer/commit/bf15e1aea5838c3ec15239bae0110a5d9b8e0fee "gestion doublage francais") et des [titres en francais](https://github.com/cyberden/CouchPotatoServer/commit/355ca50684398b5d74ab81b5cf284ff403bca331 "gestion titres en francais") fonctionne)
 
+----------
+
 Voici comment basculer votre installation actuelle (de Couchpotato) vers le dépot de **[Cyberden](https://github.com/cyberden/CouchPotatoServer "dépot de Cyberden")**:
 
-1. En SSH, placez-vous dans le dossier de l'application **Couchpotato** (pour le retrouver: `whereis couchpotato`)
+**1.** En SSH, placez-vous dans le dossier de l'application **Couchpotato** (pour le retrouver: `whereis couchpotato`)
 
-2. Entrez la commande: `nano .git/config`
+**2.** Entrez la commande: `nano .git/config`
 
-3. Repérez la ligne: 
+**3.** Repérez la ligne: 
 
-> [remote "origin"]
->         
->    url = https://github.com/CouchPotato/CouchPotatoServer.git
+```
+[remote "origin"]
+	url = https://github.com/CouchPotato/CouchPotatoServer.git
+```
 
 Et modifiez la en:
 
-> [remote "origin"]
-> 
->    url = https://github.com/cyberden/CouchPotatoServer.git
+```
+[remote "origin"]
+  url = https://github.com/cyberden/CouchPotatoServer.git
+```
 
 Sauvegardez en utilisant les commandes `Ctrl+O` puis `Ctrl+X`
 
-4. Entrez la commande: `git pull`
+**4.** Entrez la commande: `git pull`
 
-5. Accédez à l'interface de Couchpotato et lancez un redémarrage (`Restart`)
+**5.** Accédez à l'interface de Couchpotato et lancez un redémarrage (`Restart`)
 
 
-**EnJoY**, protifez de vos nouveaux plugins ;)
+*EnJoY*, profitez de vos nouveaux plugins :wink:
